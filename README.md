@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. cryptoberry 프로젝트에서 로그인과 토큰생성 기능만 Merge 후, 간단한 UI와 consol 창을 이용하여 테스트
 
 ## TODO
-1. WebPack, Babel 공부 필요 (유투브, 블로그 활용)
+1. WebPack, Babel 기본적인 개념 학습이 필수 (유투브, 블로그 활용)
 2. react 기반으로 사용자 인터페이스(UI) 개발 
 3. UI에 맞는 기능을 순차적으로 추가 필요 (현재는 로그인과, 토큰생성만 존재)
 
@@ -22,7 +22,7 @@ Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
-### `작업 이력`
+# `작업 이력`
 
 create-react-app react-test3
 
@@ -32,15 +32,15 @@ create-react-app react-test3
 
 ==> react-scripts는 특정 버전의 webpack 에 의존함
 
-# webpack dependencies 설치
+#### webpack dependencies 설치
 yarn add -D webpack webpack-cli webpack-dev-server
 
-# webpack config 파일 생성
+#### webpack config 파일 생성
 Add webpack.config.js
 
 yarn add -D @babel/core @babel/preset-env @babel/preset-react babel-loader
 
-# babel config 파일 생성 
+#### babel config 파일 생성 
 Add babel.config.js
 
 
@@ -49,30 +49,29 @@ Add babel.config.js
 yarn add -D css-loader
 yarn add -D style-loader
 
-# webpack config 파일에 rules에 추가 
+#### webpack config 파일에 rules에 추가 
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
 
 
-# class properties
+#### class properties
 npm install --save-dev @babel/plugin-proposal-class-properties
 
 
-# react-scripts 삭제 
+#### react-scripts 삭제 
 Dependencies 에서 "react-scripts": "3.4.3" 삭제
 
 
-# html-webpack-plugin
+#### html-webpack-plugin 설치
 yarn add -D html-webpack-plugin
 
 
-# file-loader 
-# Now you can import your SVG and use it as a variabl
+#### file-loader 
+svg 파일을 변수형태로 받아서 사용 가능하게 하기 위함 
 yarn add -D file-loader
 yarn add -D ipfs-http-client@
-
 
 
 함수형 컴포넌트 (Functional Component) -> 클래스형 컴포넌트로 변경 
@@ -94,7 +93,7 @@ yarn 명령어 패키지 다운로드 (npm install 로하면 에러 발생)
 
 #webpack.config.js에 외부 심볼 정의 
 
-# error 발생 
+#### runtime 에러 방지를 위해서 polyfill import 
 VM251 bundle.js:231790 Uncaught ReferenceError: regeneratorRuntime is not defined
 
 async 함수를 사용하기 위해서는 
